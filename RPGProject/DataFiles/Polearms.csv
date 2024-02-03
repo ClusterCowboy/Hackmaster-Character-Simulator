@@ -1,0 +1,19 @@
+Item,Cost,Weight (Lbs.),Size,Dmg Type,Speed Factor,T,S,M,L,H,G,AvaHi,AvaMid,AvaLo
+Awl pike ,5 gp,12,L,P,8,1d3,1d4,1d6,1d12,1d12,1d12,90,85,80
+Bardiche ,7 gp,12,L,H,4,1d4,1d6,2d4,2d6,3d4,2d8,95,90,85
+Bec de corbin ,8 gp,10,L,P/C,4,1d12,1d10,1d8,1d6,1d4,1d3,95,90,85
+Bill-guisarme ,7 gp,15,L,P/H,5,1d8,1d8,2d4,1d10,1d10,1d8,95,90,85
+Fauchard ,5 gp,7,L,P/H,3,1d3,1d4,1d6,1d8,1d8,1d10,90,85,80
+Fauchard-fork ,8 gp,9,L,P/H,3,1d6-1,1d6,1d8,1d10,1d12,2d6,95,90,85
+Glaive ,6 gp,8,L,H,3,1d4-1,1d4,1d6,1dl0,2d6,2d8,95,90,85
+Glaive-guisarme ,10 gp,10,L,P/H,4,1d6,1d6,2d4,2d6,2d6,1d10,85,80,75
+Guisarme ,5 gp,8,L,H,3,1d10,1d10,2d4,1d8,1d8,1d8,90,85,80
+Guisarme-voulge ,8 gp,15,L,P/H,5,2d4,2d4,2d4,2d4,2d4,2d4,95,90,85
+Halberd ,10 gp,15,L,P/H,4,1d8,1d8,1d10,2d6,2d6,2d6,85,80,75
+Hook fauchard ,10 gp,8,l,P/H,4,1d4,1d4,1d4,1d4,1d4,1d4,85,80,75
+Lucern hammer ,7 gp,15,L,P/C,4,2d6,2d6,2d4,1d6,1d6,1d6,90,85,80 .
+Military fork ,5 gp,7,L,P,2,1d6,1d6,1d8,2d4,2d4,2d4,95,90,85
+Partisan ,10 gp,8,L,P,4,1d4,1d4,1d6,1d6+1,1d6+1,1d6,85,80,75
+Ranseur ,6 gp,7,L,P,3,2d4,2d4,2d4,2d4,2d4,2d4,90,85,80
+Spetum ,5 gp,7,L,P,3,1d4,1d4+1,1d6+1,2d6,2d6,2d4,95,90,85
+Voulge ,5 gp,12,i,H,5,2d4,2d4,2d4,2d4,2d4,2d4,90,85,80

@@ -1,0 +1,35 @@
+Item	Cost	Weight (Lbs.)	Size	Dmg Type	Speed Factor	T	S	M	L	H	G	AvaHi AvaMed AvaLow
+Blowgun 5 gp 2 L - - - - - - - - 90 85 80
+Barbed dart | sp : S B - Id6-| Id6-1 Id6-2 !d6-4 | | 95 90 85
+needle 2 cp * s P - | | | | | | 95 90 85
+Bola 2gp 05-3 M Cc 4 Id6-2 Id6-3 =Id6-3 Id6-3 —1d6-4 | 45 24 |
+Bow - - - - - - - - - - - - -
+Composite long bow 100 gp 3 L 85 80 75
+Composite short bow 75 gp 2 M 70 75 70
+Daikyu [25iep= 1-73 ti - 4 : - - - - penal 1B 9 2
+Daikyu arrow | sp 1/6 M P - Idl0 = _2d4 1d8 1d6é Id6é-1 = 1d4 18 12 3
+Great long bow (elven) 800 gp 4 L 20 10 5
+Long bow 75 gp 3 L 90 85 80
+Short bow 30 gp 2 M 90 85 80
+Arrow, flight Sspiizery* S P dé 1d6 1d6 1d6 1d6é 1d6 90 85 80
+Arrow, sheaf 3 sp/6 eS S P 1d8 1d8 1d8 1d8 1d8 1d8 85 80 75
+Flare arrow 3 sp af S P -- Id6-3 I1d6-3 Id6-3 Id6-3 Id6-3 Id6-3 50 30 10
+Crossbow - - - -
+Hand crossbow 300 gp 0s 3 $ - - 75 70 65
+Quarrel, hand | gp * S re - Id6 = Id6-! = I1d6-3.— 16-4 | | 90 85 80
+Quarrel, hard silver jack** 50 gp * 3 P - +| +| +| +| +| +| 50 30 15
+Heavy crossbow 50 gp 14 M - - 85 80 75
+Quarrel, heavy 2 sp = S P . 1d6 1d8 -2d4+1 = 3d4 3Bd4+1 44 90 85 80
+Light crossbow 35 gp 7 M - - 80 75 70
+Quarrel, light | sp z $ P - 1d4 1dé 1d8 =. 2d4+1 3d4 3d4+1 = 90 85 80
+Peashooter crossbow 350 gps '/2 Ss - - 55 40 25
+Quarrel, peashooter 10 sp * 5 Ee - 1d6-2 1d6-3 1|d6-4 | | | 90 85 80
+Quarrel, silver jacketed 25 gp * S P - - - - - - - 60 40 30
+Hurled rock -- Ot SE! 2 | Id6-| [d6-2 Id6-3 Id6-3 1d8-5 1d8-7 95 85 75
+Hurled tankard, full . 3 S ic - Id6+1 Id6 Id6-l| Id6-2 Id6-2 Id6-3 90 85 80
+Hurled tankard, empty - - 2 S ¢ - Id6-1 Id6-| Id6-2 1d6-4 Id6-4 Id6-4 90 85 80
+Staff sling 2 sp 2 M - - - - - - . : 85 80 75
+Sling 5 cp is Ss - - - - - - - - F520: 90 85
+sling bullet | cp 0.5 Ss Cc - Id6é-1 1 d6-1 Id6 = Id6+l = Id6é+l dé 95 95 95
+sling stone - 0.5 Ss Cc - Id6-1 Id6-1 Id6-1 Id6-l 1d6-2 Id6-3 95 95 95
+sling bullet, war 3 cp 75 S Cc -- 1d6 = Id6+1 1d6+2 = d8+1 1d8 = Id6+1 0 75 50 20

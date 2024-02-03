@@ -1,0 +1,72 @@
+(^\w.*?)(\d+ (g|s|c)p|\-) (\d+|1\/2) (\w) (C|H|P.*?) (-?\d+?)
+
+Battle axe 5 gp 7 M H 2 2d4 2d4 2d4 2d4 2d4 2d4 90 85 80
+Club - 3 M C 4 1d1O 1d8 1dé 1d6-2 1d6-4 | 95 90 85
+Dagger or dirk 2 gp 1 S P -3 Id6+l Id6 Id6-| Id6-2 Id6-3 1d6-4 95 90 85
+Dart 5 sp 1/2 S P - 1d6 = Id6-1_ = 1d6-2— 16-4 | | 90 85 80
+Footman's flail 15 gp 15 M C 2 Id4+1 Id6 =Id6+!l = 2d4 = =2d4+1 = 1d 10 90 85 80
+Footman's mace 8 gp 10 M C 2 Id8+1 Id8 Id6+1 Id6 = Id4+]_—s 1d4 90 85 80
+Footman's pick 8 gp 6 M P 2 Id4+] Id6 Id6+l 2d4 Id8+!l 2d4+1 95 90 85
+Hand or throwing axe 1 gp 5 M H -| IdlO 1d8 1d6é 1d6-| =1d6-2 Id6-3 = 95 90 85
+Harpoon 20 gp 6 L P 2 1d4 1d6é 2d4 2d6 2d6 2d6 95 90 85
+Horseman's flail 8 gp 5 M C | Id4+] Id4+l Id4+] Id4+l Id4+l Id4+! 90 . 85 80
+Horseman's mace 5 gp 6 M C | dB Id6+1 == Id6 sd4 +1 Id4 I d4-1 90 85 80
+Horseman's pick 7 gp 4 M P 0 1d6é 1d6 = 1d6-1_ = Id6-2,- 1d6-3— 1d6-4 (90 85 80
+Javelin 5 sp 2 M P - 1d6é 1d6é 1d6 1d6 1d6é 1d6é 95 90 85
+Knife 5 sp 1/2 S P/H -3 Id6-| |d6-| Id6-2 |d6-4 Id6-4 Id6-5 95 90 85
+Heavy horse lance * 15 gp 15 L P 3 | d6-1 1d6 [d8+l 36 2d10 2dI2 85 80 75
+Light horse lance 6 gp 5 L P | 1d6-2 |d6-1 1d6é 1d8 IdlO0—-Id12 85 80 75
+Jousting lance 20 gp 20 L P 5 1d6-2 Id6-3 Id6-2 Id6-4 Id6-4 Id6-5 85 80 75
+Medium horse lance 10 gp 10 L P 2 Id4 Id4+1) Id6+1 = 26 2d8 + 2d10~ 85 80 75
+Main-gauche 4 gp 2 S H -| Id6 ~— | d6-1 Id4 ss Id4-1 —s Hd4-1 = 1d4-2 660 30 15
+Mancatcher 30 gp 8 L - 2 - - - - - - 95 90 85
+Metal gauntlet 2 gp 2 S C 0 1d6 = Id6-1 16-2, Hd4-1 = 1d6-3 16-4 75 60 45
+Morning star 10 gp 12 M C 2 3d4 -2d4+1 =—-.2d4—s I d6 +1 1d6 1d4 85 80 75
+Awl pike 5 gp 12 L P 8 1d3 1d4 1d6é Id12 Idl2— Id12 90 85 80
+Bardiche 7 gp 12 L H 4 1d4 1d6é 2d4 2d6 3d4 2d8 95 90 85
+Bec de corbin 8 gp 10 L P/C PIG 4 Idi2 = Id 10 1d8 1d6é 1d4 Id3 95 90 85
+Bill-guisarme 7 gp 15 L P/H 5 1d8 1d8 2d4 IdlO Idl0 = 1d8 95 90 85
+Fauchard 5 gp 7 L P/H 3 Id3 Id4 1d6é 1d8 Id8 =Idl0 90 85 80
+Fauchard-fork 8 gp 9 L P/H 3 | d6-1 1d6é 1d8 IdlO Idl2 = 2d6 95 90 85
+Glaive 6 gp 8 L H 3 14-1 I1d4 1d6é Idl0 2d6 2d8 95 9085
+Glaive-guisarme 10 gp 10 L P/H 4 1d6 1d6 2d4 2d6 2d6iF ieid10. 85 80 75
+Guisarme 5 gp 8 L H 3 Idl0 = IdlO 2d4 1d8 1d8 1d8 90 85 80
+Guisarme-voulge 8 gp 15 L P/H 5 2d4 2d4 2d4 2d4 2d4 2d4 95 90 85
+Halberd 10 gp 15 L P/H 4 1d8 Id8 Idl0 2d6 2d6 2d6 85 80 75
+Hook fauchard 10 gp 8 l P/H 4 1d4 Id4 1d4 Id4 Id4 \d4 85 80 75
+Lucern hammer 7 gp 15 L P/C 4 2d6 2d6 2d4 I1d6 ~~: 1d6 1d6 90 85 80 .
+Military fork 5 gp 7 L P p 1d6é 1d6 1d8 2d4 2d4 2d4 95 90 85
+Partisan 10 gp 8 L P 4 1d4 1d4 1d6 Id6+1 = 1d6+l = 16 85 80 75
+Ranseur 6 gp 7 L P 3 2d4 2d4 2d4 2d4 2d4 2d4 90 85 80
+Spetum 5 gp 7 L P 3 Id4 Id4+1 Id6+1 =2d6 2d6 2d4 95 90 85
+Voulge 5 gp 12 i H 5 2d4 2d4 2d4 2d4 2d4 2d4 90 85 80
+Quarterstaff - 4 L C -| 1d6é 1d6 1d6é 1d6é Id4 1d3 95 90 85
+Rapier *** 16 gp 4 M P | | d6-1 1d6 Id6+1 «=Id8+! =IdIO— sd 70 50 25
+Sabre ***. 20 gp 5 L H | 16-1 1d6 = Id6+1 =Id8+l =IdlO~ §=1d8 65 45 20
+Scourge 1 gp 2 S - 0 1d6+1 1d6 1d6-2 Id6-4 Id6-4 Id6-5 95 90 85
+Sickle 6 sp 3 S H -| Id6+1 Id6 = Id6-1 =Id6-2 =1d6-3 = Id6-4 995 90 85
+Spear 8 sp 5 M P | Id6-1 — 1d6-1 1d6é 1d8 1d8 1d6é 90 85 80
+Spear, Great 1 gp 8 L P 3 1d6é 1d6é 1d8 Id10 Idl0 = 1d8 90 85 80
+Stiletto 5 sp 1/2 S P -| Id4 1d4 Id4-1 1d4-2.-1d4-2. Id4-3 80 55 25
+Stilleto, Bloodthorn 12 gp 2 S P -4 Id6-| Id6-2 Id6-2 Id6-2 1d6-2 Id6-3 75 70 65
+Broad sword 10 gp 4 M H 0 Idl10 IdlO 2d4 = Id6+l 1d6 1d4 90 85 80
+Khopesh 10 gp 7 M H 4 IdlO0 IdlO+l 2d4 1d6é 1d6é Id4 95 90 85
+Long sword 15 gp 4 M H 0 1d6é 1d6 1d8 Id12 2d6 2d8: 90 85 80
+Rapier, Petite 15 gp 1/2 S P -4 Id6-3 Id6-2 Id6-! 1d6é Id6-1 1d6-2 = 80 75 70
+Scimitar 15 gp 4 M H 0 1d8 1d8 1d8 1d8 1d8 1d8 95 90 85
+Short sword 10 gp 3 S P -2 1d6-2 Idé6-! 1d6é 1d8 1d8 1d6 90 85 80
+Two-handed sword 50 gp 15 L H 5 Id4—s Id6-|_ —s Id 10 3d6 2d10 2dI2 85 80 75
+Sword-breaker (1-H) 36 gp 4 M P 4 1d6-2 1d6-2 Id6-3 Id6-4 Id6-4 Id6-5 65 45 15
+Sword-breaker (2-H) 36 gp 4 M P 3 Id6-2 Id6-2 Id6-3 Id6-4 Id6-4 Id6-5 65 45 15
+Taichi/no-daichi 140 gp 6 L H 4 1d8 1d8 Id12 3d6 2d8 2d6 10 4 |
+Trident 15 gp 5 L P 2 1d4 Id4 Id6+l 3d4 3d4. 2d4+1— (90 85 80
+Warhammer 2 gp 6 M C -| 1d8 1d8 1d6 1d4 Id4 1d3 95 90 85
+Whip 1 sp 2 M - 3 Id6-3 1d6-2 1d6-4 | | | 95 90 85
+
+
+Bastard Sword One-handed 25 gp 10 10 H 1 | d6-1 1d6 1d8 1d12 2d6 2d8 85 80 75
+Bastard Sword Two-handed 25 gp 10 10 H  3 |d4-1 1d4 2d4 2d8 Sd6 if, -2d10) 7085 80 75
+Katana 1H 120 gp 5 M H/P | 1d6 1d8 IdiO Id 12 Idl2 Id 10 12 6 |
+Katana 2H 120 gp 5 M H/P | 2d6 2d6 2d6 2d6 2d6 2d6 12 6 |
+Tanto 5 gp 1/2 S H/P -3 1d6 1d6é 1d6 Id6-1_ = 1d6-2, 16-3 20 10 2
+Wakizashi 65 gp 3 M H/P. cAVe 0 1d8 1d8 I1d8 1d8 I1d8 1d6é 9 3 |
