@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		DataFiles\weapons.db = DataFiles\weapons.db
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerCharacters", "PlayerCharacters\PlayerCharacters.csproj", "{B85A245D-2127-4518-AC2D-6B2EC6F1BC0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleManager", "BattleManager\BattleManager.csproj", "{9FEE852F-DF07-47C6-9AC2-61CF9FEEDEE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{6A8D3A23-8C86-4AC3-826B-1A640AD655B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A8D3A23-8C86-4AC3-826B-1A640AD655B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A8D3A23-8C86-4AC3-826B-1A640AD655B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B85A245D-2127-4518-AC2D-6B2EC6F1BC0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B85A245D-2127-4518-AC2D-6B2EC6F1BC0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B85A245D-2127-4518-AC2D-6B2EC6F1BC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B85A245D-2127-4518-AC2D-6B2EC6F1BC0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FEE852F-DF07-47C6-9AC2-61CF9FEEDEE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FEE852F-DF07-47C6-9AC2-61CF9FEEDEE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FEE852F-DF07-47C6-9AC2-61CF9FEEDEE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FEE852F-DF07-47C6-9AC2-61CF9FEEDEE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

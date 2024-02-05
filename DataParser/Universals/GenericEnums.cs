@@ -49,5 +49,26 @@ namespace GenericEnums
 
             }
         }
+
+        public enum CharacterArchtypes
+        {
+            Fighter,
+            Thief,
+            Cleric,
+            MagicUser
+        }
+
+        public enum CharacterClasses {
+
+        }
+
+        public enum SavingThrowCategories {
+            ParalyzationPoisonDeathMagic = 0,
+            RodStaffWand,
+            PetrificationHackFrenzyHackLustPolymorph,
+            BreathWeapon,
+            Apology,
+            Spells
+            }
     }
 }
