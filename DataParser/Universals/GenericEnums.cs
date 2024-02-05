@@ -59,7 +59,57 @@ namespace GenericEnums
         }
 
         public enum CharacterClasses {
+            Fighter,
+            Barbarian,
+            Berserker,
+            Cavalier,
+            DarkKnight,
+            KnightErrant,
+            Monk,
+            Paladin,
+            Ranger,
+            MagicUser,
+            BattleMage,
+            Illusionist,
+            Cleric,
+            Druid,
+            Thief,
+            Assassin,
+            Bard
+        }
 
+        /***
+         * Translate a class into the archtype. Important for attack matrix, saving throws,
+         * etc.
+         * */
+        public static CharacterArchtypes GetArchtype(CharacterClasses c)
+        {
+            switch (c)
+            {
+                case CharacterClasses.Fighter:
+                case CharacterClasses.Barbarian:
+                case CharacterClasses.Berserker:
+                case CharacterClasses.Cavalier:
+                case CharacterClasses.DarkKnight:
+                case CharacterClasses.KnightErrant:
+                case CharacterClasses.Monk:
+                case CharacterClasses.Paladin:
+                case CharacterClasses.Ranger:
+                    return CharacterArchtypes.Fighter;
+                case CharacterClasses.MagicUser:
+                case CharacterClasses.BattleMage:
+                case CharacterClasses.Illusionist:
+                    return CharacterArchtypes.MagicUser;
+                case CharacterClasses.Cleric:
+                case CharacterClasses.Druid:
+                    return CharacterArchtypes.Cleric;
+                case CharacterClasses.Thief:
+                case CharacterClasses.Assassin:
+                case CharacterClasses.Bard:
+                    return CharacterArchtypes.Thief;
+                default:
+                    return CharacterArchtypes.Fighter;
+            }
         }
 
         public enum SavingThrowCategories {

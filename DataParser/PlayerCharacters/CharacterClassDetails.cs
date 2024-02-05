@@ -76,6 +76,15 @@ namespace PlayerCharacters
             RetrieveAllSavingThrowMatrices();
         }
 
+        #region QuerySection
+
+
+        #endregion
+
+
+        // --------------------------------------------------------------------
+        // Retrieval Section --------------------------------------------------
+        #region Retrieval
         private void RetrieveData()
         {
             using (SQLiteConnection connection = new SQLiteConnection(CharacterClassConnectionString))
@@ -268,10 +277,12 @@ namespace PlayerCharacters
                 connection.Close();
             }
         }
+        #endregion
 
+        // --------------------------------------------------------------------
+        // Backup methods -----------------------------------------------------
+        #region BackupMethods
 
-        // ----------------------------------------------------------------------------------
-        // Backup methods
         public void MakeTables()
         {
             using (SQLiteConnection connection = new SQLiteConnection(CharacterClassConnectionString))
@@ -410,5 +421,6 @@ namespace PlayerCharacters
                 connection.Close();
             }
         }
+        #endregion
     }
 }
