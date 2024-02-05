@@ -32,7 +32,7 @@ namespace GenericEnums
             }
         }
 
-        public enum WeaponType { H, C, P };
+        public enum WeaponType { H, C, P, H_C, H_P, C_P };
 
         public static string TranslateWeaponType(WeaponType wt)
         {

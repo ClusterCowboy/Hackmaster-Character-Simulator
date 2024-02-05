@@ -3,28 +3,17 @@ using System.Security.Cryptography;
 
 namespace Universals
 {
-    [Serializable]
-    public class Dice : ISerializable
+    public sealed class Dice
     {
-        public Dice(int NumOfDice, int SidesOfDice, int Modifier = 0) 
-        {
-            numOfDice = NumOfDice;
-            sidesOfDice = SidesOfDice;
-            modifier = Modifier;
-        }
-        public int numOfDice { get; set; }
-        public int sidesOfDice { get; set; }
-        public int modifier { get; set; }
+        private static readonly Lazy<Dice> lazy =
+            new Lazy<Dice>(() => new Dice());
 
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("NumOfDice", this.numOfDice);
-            info.AddValue("SidesOnDice", this.sidesOfDice);
-            info.AddValue("Modifier", this.modifier);
-        }
+        public static Dice Instance { get { return lazy.Value; } }
 
-        public int Roll(int additionalModifier = 0) =>
-            RandomNumberGenerator.GetInt32(numOfDice, numOfDice * sidesOfDice) + (modifier + additionalModifier);
+        private Dice() { }
+
+        public int Roll(int numOfDice, int sidesOfDice, int modifier = 0) =>
+            RandomNumberGenerator.GetInt32(numOfDice, numOfDice * sidesOfDice) + modifier;
 
         /// <summary>
         /// Roll dice that explode! Exploding is when you roll the highest value, 
@@ -33,9 +22,9 @@ namespace Universals
         /// </summary>
         /// <param name="additionalModifier"></param>
         /// <returns></returns>
-        public int RollExplodingDice(int additionalModifier = 0)
+        public int RollExplodingDice(int numOfDice, int sidesOfDice, int modifier = 0)
         {
-            int result = modifier + additionalModifier;
+            int result = modifier;
             for (int i = 0; i < numOfDice; i++)
             {
                 int thisRun = RandomNumberGenerator.GetInt32(1, sidesOfDice + 1);

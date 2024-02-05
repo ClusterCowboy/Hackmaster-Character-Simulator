@@ -9,7 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Universals", "Universals\Un
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing", "Testing\Testing.csproj", "{F0C09F89-E770-409B-88CD-33C91BDF21D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weapons", "Weapons\Weapons.csproj", "{6A8D3A23-8C86-4AC3-826B-1A640AD655B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weapons", "Weapons\Weapons.csproj", "{6A8D3A23-8C86-4AC3-826B-1A640AD655B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C5FF067-909B-43AB-8A93-8FB11739439B}"
+	ProjectSection(SolutionItems) = preProject
+		DataFiles\Melee Weapons.csv = DataFiles\Melee Weapons.csv
+		DataFiles\Melee Weapons1.csv = DataFiles\Melee Weapons1.csv
+		DataFiles\Polearms.csv = DataFiles\Polearms.csv
+		DataFiles\weapons.db = DataFiles\weapons.db
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

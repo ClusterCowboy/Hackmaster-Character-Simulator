@@ -8,7 +8,7 @@ using Universals;
 
 namespace Weapons
 {
-    internal class MonsterWeapon : IWeapon
+    internal class MonsterWeapon
     {
         public string ItemName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public double _weight { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

@@ -14,21 +14,18 @@ namespace Testing.UniversalsTests
         [TestMethod]
         public void DiceTester()
         {
-            Dice attackDie = new Dice(1, 20, 5);
-            Dice damageDice = new Dice(4, 4);
-
             int attackTimes = 5;
             Console.WriteLine("Attack " + attackTimes + " times");
             for (int i = 0; i < attackTimes; i++)
             {
-                Console.WriteLine(i.ToString() + " ... " + attackDie.Roll());
+                Console.WriteLine(i.ToString() + " ... " + Dice.Instance.Roll(1, 20, 5));
             }
 
             int damageTimes = 15;
             Console.WriteLine("Damage " + damageTimes + " times");
             for (int i = 0; i < damageTimes; i++)
             {
-                Console.WriteLine(i.ToString() + " ... " + damageDice.RollExplodingDice());
+                Console.WriteLine(i.ToString() + " ... " + Dice.Instance.RollExplodingDice(4, 4));
             }
         }
     }
