@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerCharacters", "PlayerC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleManager", "BattleManager\BattleManager.csproj", "{9FEE852F-DF07-47C6-9AC2-61CF9FEEDEE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armor", "Armor\Armor.csproj", "{713DFFBD-8A39-436E-99EA-852D7D55A7AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,10 @@ Global
 		{9FEE852F-DF07-47C6-9AC2-61CF9FEEDEE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FEE852F-DF07-47C6-9AC2-61CF9FEEDEE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FEE852F-DF07-47C6-9AC2-61CF9FEEDEE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713DFFBD-8A39-436E-99EA-852D7D55A7AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713DFFBD-8A39-436E-99EA-852D7D55A7AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713DFFBD-8A39-436E-99EA-852D7D55A7AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713DFFBD-8A39-436E-99EA-852D7D55A7AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -129,7 +129,7 @@ namespace Weapons
                     {
                         command.Parameters.AddWithValue("@ItemName", weapon.ItemName);
                         command.Parameters.AddWithValue("@Value", weapon.Value);
-                        command.Parameters.AddWithValue("@_weight", weapon._weight);
+                        command.Parameters.AddWithValue("@_weight", weapon.Weight);
                         command.Parameters.AddWithValue("@_weaponSize", weapon._weaponSize.ToString());
                         command.Parameters.AddWithValue("@WeaponDamageType", weapon.WeaponDamageType.ToString());
                         command.Parameters.AddWithValue("@SpeedFactor", weapon.SpeedFactor);
@@ -177,7 +177,7 @@ namespace Weapons
                             Id = Convert.ToInt32(reader["Id"]),
                             ItemName = Convert.ToString(reader["ItemName"]),
                             Value = Convert.ToDouble(reader["Value"]),
-                            _weight = Convert.ToDouble(reader["_weight"]),
+                            Weight = Convert.ToDouble(reader["_weight"]),
                             _weaponSize = (Size)Enum.Parse(typeof(Size), Convert.ToString(reader["_weaponSize"])),
                             WeaponDamageType = (WeaponType)Enum.Parse(typeof(WeaponType), Convert.ToString(reader["WeaponDamageType"])),
                             SpeedFactor = Convert.ToInt32(reader["SpeedFactor"]),
@@ -204,7 +204,7 @@ namespace Weapons
                             _avaLow = Convert.ToInt32(reader["_avaLow"])
                         };
 
-                        Console.WriteLine($"Id: {result.Id}, ItemName: {result.ItemName}, Value: {result.Value}, _weight: {result._weight}, _weaponSize: {result._weaponSize}, WeaponDamageType: {result.WeaponDamageType}, SpeedFactor: {result.SpeedFactor}, ...");
+                        Console.WriteLine($"Id: {result.Id}, ItemName: {result.ItemName}, Value: {result.Value}, _weight: {result.Weight}, _weaponSize: {result._weaponSize}, WeaponDamageType: {result.WeaponDamageType}, SpeedFactor: {result.SpeedFactor}, ...");
                     }
                 }
             }
@@ -249,7 +249,7 @@ namespace Weapons
                 command.Parameters.AddWithValue("@Id", id);
                 command.Parameters.AddWithValue("@ItemName", weapon.ItemName);
                 command.Parameters.AddWithValue("@Value", weapon.Value);
-                command.Parameters.AddWithValue("@_weight", weapon._weight);
+                command.Parameters.AddWithValue("@_weight", weapon.Weight);
                 command.Parameters.AddWithValue("@_weaponSize", weapon._weaponSize.ToString());
                 command.Parameters.AddWithValue("@WeaponDamageType", weapon.WeaponDamageType.ToString());
                 command.Parameters.AddWithValue("@SpeedFactor", weapon.SpeedFactor);

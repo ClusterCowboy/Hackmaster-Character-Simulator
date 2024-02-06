@@ -5,12 +5,12 @@ using static GenericEnums.GenericEnums;
 namespace Weapons
 {
     [Serializable]
-    public class MeleeWeapon : IWeapon, IMoney, ISerializable
+    public class MeleeWeapon : IWeapon, IWeight, IItemName, IMoney, ISerializable
     {
         public int Id { get; set; }
         public string ItemName { get; set; }
         public double Value { get; set; }
-        public double _weight { get; set; }
+        public double Weight { get; set; }
         public Size _weaponSize { get; set; }
         public WeaponType WeaponDamageType { get; set; }
         public int SpeedFactor { get; set; }
@@ -41,7 +41,7 @@ namespace Weapons
         {
             info.AddValue(nameof(ItemName), ItemName);
             info.AddValue(nameof(Value), Value);
-            info.AddValue(nameof(_weight), _weight);
+            info.AddValue(nameof(Weight), Weight);
             info.AddValue(nameof(WeaponDamageType), WeaponDamageType);
             info.AddValue(nameof(_weaponSize), _weaponSize);
             info.AddValue(nameof(SpeedFactor), SpeedFactor);

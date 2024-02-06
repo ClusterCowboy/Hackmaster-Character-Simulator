@@ -8,6 +8,7 @@ namespace GenericEnums
 {
     public static class GenericEnums
     {
+        #region Sizes
         public enum Size { T, S, M, L, H, G };
 
         public static string TranslateSize(Size size)
@@ -31,7 +32,13 @@ namespace GenericEnums
 
             }
         }
+        #endregion
 
+        #region Armor Enums
+        public enum ItemBulk { non, fairly, bulky }
+        #endregion
+
+        #region Weapon Enums
         public enum WeaponType { H, C, P, H_C, H_P, C_P };
 
         public static string TranslateWeaponType(WeaponType wt)
@@ -50,6 +57,10 @@ namespace GenericEnums
             }
         }
 
+        public enum WeaponStyle { Melee, Polearm, Ranged }
+        #endregion
+
+        #region Class Enums
         public enum CharacterArchtypes
         {
             Fighter,
@@ -111,7 +122,9 @@ namespace GenericEnums
                     return CharacterArchtypes.Fighter;
             }
         }
+        #endregion
 
+        #region Saving Throws
         public enum SavingThrowCategories {
             ParalyzationPoisonDeathMagic = 0,
             RodStaffWand,
@@ -120,5 +133,6 @@ namespace GenericEnums
             Apology,
             Spells
             }
+        #endregion
     }
 }

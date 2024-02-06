@@ -12,10 +12,8 @@ namespace Weapons
     public interface IWeapon
     {
         public int RollDice(Size size, int modifier);
-
         public int Id { get; set; }
-        public string ItemName { get; set; }
-        public double _weight { get; set; }
+
         public Size _weaponSize { get; set; }
         public int tinyDiceNum { get; set; }
         public int tinyDiceSides { get; set; }
