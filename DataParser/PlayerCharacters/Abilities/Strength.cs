@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlayerCharacters.Abilities
 {
-    internal class Strength : AbilityScore
+    public class Strength : AbilityScore
     {
         public Strength(int Score, int Fractional, int RacialMax, int RacialMin)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PlayerCharacters.Abilities
 {
-    internal class Constitution : AbilityScore
+    public class Constitution : AbilityScore
     {
         public Constitution(int Score, int Fractional, int RacialMax, int RacialMin)
         {

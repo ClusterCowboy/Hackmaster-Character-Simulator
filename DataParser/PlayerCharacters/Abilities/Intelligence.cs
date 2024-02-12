@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlayerCharacters.Abilities
 {
-    internal class Intelligence : AbilityScore
+    public class Intelligence : AbilityScore
     {
         public Intelligence(int Score, int Fractional, int RacialMax, int RacialMin)
         {
@@ -73,6 +73,44 @@ namespace PlayerCharacters.Abilities
             else if (Ability <= 22) return 98;
             else if (Ability <= 23) return 99;
             else return 100;
+        }
+        
+        public int GetMaxNumSpellsPerLevel()
+        {
+            if (Ability <= 7) return 0;
+            else if (Ability <= 8) return 5;
+            else if (Ability <= 9) return 6;
+            else if (Ability <= 12) return 7;
+            else if (Ability <= 14) return 9;
+            else if (Ability <= 16) return 11;
+            else if (Ability <= 17) return 14;
+            else if (Ability <= 18 && AbilityFractional < 51) return 18;
+            else if (Ability <= 18 && AbilityFractional > 50) return 20;
+            else return 999;
+        }
+
+        public int GetIllusionImmunity()
+        {
+            if (Ability <= 17) return -1;
+            else if (Ability <= 18) return 0;
+            else if (Ability <= 19) return 1;
+            else if (Ability <= 20) return 2;
+            else if (Ability <= 21) return 3;
+            else if (Ability <= 22) return 4;
+            else if (Ability <= 23) return 5;
+            else if (Ability <= 24) return 6;
+            else return 7;
+        }
+
+        public int GetBaseChanceOfSpellMishap()
+        {
+            if (Ability <= 7) return 0;
+            else if (Ability <= 8) return 35;
+            else if (Ability <= 9) return 20;
+            else if (Ability <= 10) return 15;
+            else if (Ability <= 11) return 10;
+            else if (Ability <= 12) return 5;
+            else return 0;
         }
     }
 }

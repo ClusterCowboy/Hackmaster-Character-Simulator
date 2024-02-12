@@ -9,12 +9,14 @@ namespace PlayerCharacters
 {
     public class CharacterStatBlock
     {
-        private Strength Strength{ get;set;}
-        private Dexterity Dexterity { get; set; }
-        private int Constitution { get; set; }
-        private int Intelligence { get; set; }
-        private int Wisdom { get; set; }
-        private int Charisma { get; set; }
-        private int Comeliness { get; set; }
+        public required Strength Strength{ get;set;}
+        public required Dexterity Dexterity { get; set; }
+        public required Constitution Constitution { get; set; }
+        public required Intelligence Intelligence { get; set; }
+        public required Wisdom Wisdom { get; set; }
+        public required Charisma Charisma { get; set; }
+        public required Comeliness Comeliness { get; set; }
+        public required int Honor { get; set; }
+        public required int TempHonor { get; set; }
     }
 }

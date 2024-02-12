@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlayerCharacters.Abilities
 {
-    internal class Dexterity : AbilityScore
+    public class Dexterity : AbilityScore
     {
         public Dexterity(int Score, int Fractional, int RacialMax, int RacialMin)
         {
