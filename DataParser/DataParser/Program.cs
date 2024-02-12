@@ -1,23 +1,14 @@
-﻿using CsvHelper;
-using CsvHelper.Configuration;
-using GenericEnums;
-using PlayerCharacters;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using Universals;
-using Weapons;
-using static GenericEnums.GenericEnums;
+﻿using System.Text.Json;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        
-        CharacterClassDetails c = new CharacterClassDetails();
 
+        
+
+        string jsonString = JsonSerializer.Serialize(s);
+        Console.WriteLine(jsonString);  
 
     }
 }

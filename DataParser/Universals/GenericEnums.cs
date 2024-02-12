@@ -132,7 +132,93 @@ namespace GenericEnums
             BreathWeapon,
             Apology,
             Spells
-            }
+        }
         #endregion
+
+        #region Time
+        public enum Time
+        {
+            Segments,
+            MeleeRounds,
+            Rounds,
+            Turns
+        }
+
+        private static readonly Dictionary<Time, double> SegmentTo = new Dictionary<Time, double>
+        {
+            { Time.Segments, 1},
+            { Time.MeleeRounds, .1},
+            { Time.Rounds, .01},
+            { Time.Turns, .001}
+        };
+        private static readonly Dictionary<Time, double> MeleeRoundTo = new Dictionary<Time, double>
+        {
+            { Time.Segments, 10},
+            { Time.MeleeRounds, 1},
+            { Time.Rounds, .1},
+            { Time.Turns, .01}
+        };
+        private static readonly Dictionary<Time, double> RoundsTo = new Dictionary<Time, double>
+        {
+            { Time.Segments, 100},
+            { Time.MeleeRounds, 10},
+            { Time.Rounds, 1},
+            { Time.Turns, .1}
+        };
+        private static readonly Dictionary<Time, double> TurnsTo = new Dictionary<Time, double>
+        {
+            { Time.Segments, 1000},
+            { Time.MeleeRounds, 100},
+            { Time.Rounds, 10},
+            { Time.Turns, 1}
+        };
+
+        public static double ConvertTimeToTime(double value, Time unitFrom, Time unitTo)
+        {
+            switch (unitFrom)
+            {
+                case Time.Segments:
+                    return SegmentTo[unitTo] * value;
+                case Time.MeleeRounds: 
+                    return MeleeRoundTo[unitTo] * value;
+                case Time.Rounds:
+                    return RoundsTo[unitTo] * value;
+                case Time.Turns:
+                    return TurnsTo[unitTo] * value;
+            }
+            return 0;
+        }
+        #endregion
+
+        #region Distances
+        private static readonly Dictionary<Distances, double> FeetTo = new Dictionary<Distances, double>
+        {
+            { Distances.Feet, 1},
+            { Distances.Yards, (1.0/3.0)}
+        };
+        private static readonly Dictionary<Distances, double> YardsTo = new Dictionary<Distances, double>
+        {
+            { Distances.Feet, 3},
+            { Distances.Yards, 1}
+        };
+        public enum Distances
+        {
+            Feet,
+            Yards
+        }
+
+        public static double ConvertDistToDist(double value, Distances unitFrom, Distances unitTo)
+        {
+            switch (unitFrom)
+            {
+                case Distances.Feet:
+                    return FeetTo[unitTo] * value;
+                case Distances.Yards:
+                    return YardsTo[unitTo] * value;
+            }
+            return 0;
+        }
+        #endregion
+
     }
 }

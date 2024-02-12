@@ -30,5 +30,15 @@ namespace Armor
         public ShieldType ShieldType { get; set; }
         public ItemBulk Bulk { get; set; }
         public double Value { get; set; }
+
+        public int GetACValueMelee()
+        {
+            return CurrentAC;
+        }
+        public int GetACValueRanged()
+        {
+            // Body shields have a ranged AC of 6, only occurs at max AC
+            return (CurrentAC == 4 && ShieldType == ShieldType.Body) ? 6 : CurrentAC;
+        }
     }
 }
