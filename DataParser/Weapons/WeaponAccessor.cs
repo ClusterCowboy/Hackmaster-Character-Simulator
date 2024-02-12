@@ -21,7 +21,7 @@ namespace Weapons
      * */
     public class WeaponAccessor
     {
-        Dictionary<string, MeleeWeapon> MeleeWeapons;
+        public Dictionary<string, MeleeWeapon> MeleeWeaponsCatalog;
         public string WeaponsConnectionString = "Data Source=weapons.db;Version=3";
         public WeaponAccessor()
         {
@@ -67,28 +67,8 @@ namespace Weapons
                     command.ExecuteNonQuery();
                 }
 
-                //// Insert data
-                //MeleeWeapon MeleeWeaponToInsert = new MeleeWeapon { Name = "John Doe", Age = 25 };
-                //int insertedId = InsertData(connection, MeleeWeaponToInsert);
-
-                //// Read data
-                //Console.WriteLine("Read Data:");
-                //ReadData<MeleeWeapon>(connection);
-
-                //// Update data
-                //MeleeWeapon updatedMeleeWeapon = new MeleeWeapon { Id = insertedId, Name = "Updated Name", Age = 30 };
-                //UpdateData(connection, updatedMeleeWeapon);
-
-                //// Read updated data
-                //Console.WriteLine("\nRead Updated Data:");
-                //ReadData<MeleeWeapon>(connection);
-
-                //// Delete data
-                //DeleteData(connection, insertedId);
-
-                // Read data after deletion
-                //Console.WriteLine("\nRead Data After Deletion:");
-                //ReadData<MeleeWeapon>(connection);
+                // Read updated data
+                ReadData(connection);
 
                 connection.Close();
             }
@@ -204,7 +184,7 @@ namespace Weapons
                             _avaLow = Convert.ToInt32(reader["_avaLow"])
                         };
 
-                        Console.WriteLine($"Id: {result.Id}, ItemName: {result.ItemName}, Value: {result.Value}, _weight: {result.Weight}, _weaponSize: {result._weaponSize}, WeaponDamageType: {result.WeaponDamageType}, SpeedFactor: {result.SpeedFactor}, ...");
+                        MeleeWeaponsCatalog[result.ItemName] = result;
                     }
                 }
             }

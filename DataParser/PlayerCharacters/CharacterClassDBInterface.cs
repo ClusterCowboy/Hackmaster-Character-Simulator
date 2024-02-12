@@ -5,7 +5,7 @@ using static GenericEnums.GenericEnums;
 namespace PlayerCharacters
 {
 
-    public class CharacterClassDetails
+    public class CharacterClassDBInterface
     {
         public string CharacterClassConnectionString = "Data Source=characterclass.db;Version=3";
         // Cleric Stuff
@@ -55,7 +55,7 @@ namespace PlayerCharacters
                     AC_17 INTEGER, AC_18 INTEGER, AC_19 INTEGER, AC_20 INTEGER
                 )";
 
-        public CharacterClassDetails()
+        public CharacterClassDBInterface()
         {
             clericSavingThrows = new Dictionary<int, Dictionary<SavingThrowCategories, int>>();
             clericAttackMatrix = new Dictionary<int, Dictionary<int, int>>();

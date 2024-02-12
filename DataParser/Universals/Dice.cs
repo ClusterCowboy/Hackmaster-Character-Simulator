@@ -46,5 +46,20 @@ namespace Universals
             }
             return result;
         }
+
+        public bool D20CheckOverPass(int target)
+        {
+            return (Roll(1, 20) >= target) ? true : false;
+        }
+
+        public bool D20CheckUnderPass(int target)
+        {
+            return (Roll(1, 20) <= target) ? true : false;
+        }
+
+        public bool PercentileCheckUnderPass(int target)
+        {
+            return (Roll(1, 100) <= target) ? true : false;
+        }
     }
 }

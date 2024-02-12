@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Armor\Armor.csproj" />
+    <ProjectReference Include="..\PlayerCharacters\PlayerCharacters.csproj" />
     <ProjectReference Include="..\Universals\Universals.csproj" />
   </ItemGroup>
 

@@ -9,7 +9,7 @@ using static GenericEnums.GenericEnums;
 
 namespace Weapons
 {
-    public interface IWeapon
+    public interface IWeapon : IWeight
     {
         public int RollDice(Size size, int modifier);
         public int Id { get; set; }
