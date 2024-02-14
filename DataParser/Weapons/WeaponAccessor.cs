@@ -25,6 +25,12 @@ namespace Weapons
         public string WeaponsConnectionString = "Data Source=weapons.db;Version=3";
         public WeaponAccessor()
         {
+
+            if (null == MeleeWeaponsCatalog)
+            {
+                MeleeWeaponsCatalog = new Dictionary<string, MeleeWeapon>();
+            }
+
             using (SQLiteConnection connection = new SQLiteConnection(WeaponsConnectionString))
             {
                 connection.Open();
@@ -48,7 +54,7 @@ namespace Weapons
                     mediumDiceNum INTEGER,
                     mediumDiceSides INTEGER,
                     mediumDiceMod INTEGER,
-                    largeDiceNum INTEGER,
+                    largeDiceNum INTEGER,W
                     largeDiceSides INTEGER,
                     largeDiceMod INTEGER,
                     hugeDiceNum INTEGER,

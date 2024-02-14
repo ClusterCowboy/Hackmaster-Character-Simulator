@@ -13,11 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weapons", "Weapons\Weapons.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C5FF067-909B-43AB-8A93-8FB11739439B}"
 	ProjectSection(SolutionItems) = preProject
-		DataFiles\characterclass.db = DataFiles\characterclass.db
 		DataFiles\Melee Weapons.csv = DataFiles\Melee Weapons.csv
 		DataFiles\Melee Weapons1.csv = DataFiles\Melee Weapons1.csv
 		DataFiles\Polearms.csv = DataFiles\Polearms.csv
-		DataFiles\weapons.db = DataFiles\weapons.db
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayerCharacters", "PlayerCharacters\PlayerCharacters.csproj", "{B85A245D-2127-4518-AC2D-6B2EC6F1BC0D}"

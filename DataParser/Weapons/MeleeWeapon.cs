@@ -5,7 +5,7 @@ using static GenericEnums.GenericEnums;
 namespace Weapons
 {
     [Serializable]
-    public class MeleeWeapon : IWeapon, IItemName, IMoney, ISerializable, IWeight
+    public class MeleeWeapon : IWeapon, IItemName, IMoney, ISerializable
     {
         public int Id { get; set; }
         public string ItemName { get; set; }

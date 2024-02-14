@@ -20,9 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="weapons.db">
+    <Content Include="weapons.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 ﻿using Armor;
 using PlayerCharacters.Abilities;
+using System.Reflection;
 using Universals;
 using Weapons;
 using static GenericEnums.GenericEnums;
@@ -65,15 +66,43 @@ namespace PlayerCharacters
         #region Weight Amounts
         public double GetCurrentWeightCarried()
         {
-            double totalCarried = (CurrentlyWornArmor == null) ? 0 : CurrentlyWornArmor.Weight;
-            totalCarried += (CurrentlyWornShield == null) ? 0 : CurrentlyWornShield.Weight;
-            totalCarried += (CurrentlyWornHelmet == null) ? 0 : CurrentlyWornHelmet.Weight;
-            if (Weapons != null)
+            double weight = 0;
+
+            var weightProperties = GetType().GetProperties()
+            .Where(prop => prop.PropertyType.GetInterfaces().Contains(typeof(IWeight)))
+            .ToList();
+
+            // This will get every object which implements the IWeight interface.
+            // All of them save those which are in containers like dictionaries or 
+            // Lists. Those MUST be gotten separately.
+            foreach (var property in weightProperties)
             {
-                totalCarried += Weapons.Sum(x => x.Weight);
+                var weightObject = property.GetValue(this) as IWeight;
+                if (weightObject != null)
+                {
+                    Console.WriteLine(property.Name + " " + weightObject.Weight);
+                    weight += weightObject.Weight;
+                }
             }
 
-            return totalCarried;
+            if (null != Weapons)
+            {
+                foreach (IWeapon weapon in Weapons)
+                {
+                    weight += weapon.Weight;
+                }
+            }
+
+            return weight;
+            //double totalCarried = (CurrentlyWornArmor == null) ? 0 : CurrentlyWornArmor.Weight;
+            //totalCarried += (CurrentlyWornShield == null) ? 0 : CurrentlyWornShield.Weight;
+            //totalCarried += (CurrentlyWornHelmet == null) ? 0 : CurrentlyWornHelmet.Weight;
+            //if (Weapons != null)
+            //{
+            //    totalCarried += Weapons.Sum(x => x.Weight);
+            //}
+
+            //return totalCarried;
         }
         public int GetCurrentWeightAllowance() =>
             CharacterStats.Strength.GetWeightAllowance();

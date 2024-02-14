@@ -13,7 +13,6 @@ namespace Weapons
     {
         public int RollDice(Size size, int modifier);
         public int Id { get; set; }
-
         public Size _weaponSize { get; set; }
         public int tinyDiceNum { get; set; }
         public int tinyDiceSides { get; set; }
