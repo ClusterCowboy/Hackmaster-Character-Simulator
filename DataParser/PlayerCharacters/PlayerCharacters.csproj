@@ -7,8 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="characterclass.db" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Armor\Armor.csproj" />
     <ProjectReference Include="..\Weapons\Weapons.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="characterclass.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

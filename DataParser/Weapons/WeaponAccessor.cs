@@ -64,7 +64,7 @@ namespace Weapons
 
                 using (SQLiteCommand command = new SQLiteCommand(createTableQuery, connection))
                 {
-                    command.ExecuteNonQuery();
+                    int m = command.ExecuteNonQuery();
                 }
 
                 // Read updated data
