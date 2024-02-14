@@ -4,6 +4,7 @@ using System.Reflection;
 using Universals;
 using Weapons;
 using static GenericEnums.GenericEnums;
+using static PlayerCharacters.PlayerCharacterEnums;
 
 namespace PlayerCharacters
 {
@@ -26,6 +27,8 @@ namespace PlayerCharacters
         public Shield? CurrentlyWornShield { get; set; }
         public Helmet? CurrentlyWornHelmet { get; set; }
         public required CharacterStatBlock CharacterStats {  get; set; }
+        private WeightStatus CurrentWeightStatus { get; set; } = WeightStatus.Unencumbered;
+        private double CurrentWeightCarried { get; set; } = 0;
 
         #region Gear
         public void EquipArmor(Armor.Armor armor)
@@ -33,6 +36,7 @@ namespace PlayerCharacters
             if (armor == null)
                 CurrentlyWornArmor = new Armor.Armor();
             CurrentlyWornArmor = armor;
+            UpdateWeightStatus();
         }
 
         public void EquipWeapon(IWeapon weapon) 
@@ -45,6 +49,7 @@ namespace PlayerCharacters
             {
                 Weapons.Add(weapon);
             }
+            UpdateWeightStatus();
         }
         #endregion
 
@@ -93,19 +98,59 @@ namespace PlayerCharacters
                 }
             }
 
-            return weight;
-            //double totalCarried = (CurrentlyWornArmor == null) ? 0 : CurrentlyWornArmor.Weight;
-            //totalCarried += (CurrentlyWornShield == null) ? 0 : CurrentlyWornShield.Weight;
-            //totalCarried += (CurrentlyWornHelmet == null) ? 0 : CurrentlyWornHelmet.Weight;
-            //if (Weapons != null)
-            //{
-            //    totalCarried += Weapons.Sum(x => x.Weight);
-            //}
+            // TODO: Implement inventory 
 
-            //return totalCarried;
+            return weight;
         }
-        public int GetCurrentWeightAllowance() =>
+        public double GetCurrentWeightAllowance() =>
             CharacterStats.Strength.GetWeightAllowance();
+        public double GetMaxWeightCarried() =>
+            CharacterStats.Strength.GetMaxCarryWeight();
+
+        /// <summary>
+        /// This function should be called every time the character's inventory
+        /// is modified
+        /// </summary>
+        private void UpdateWeightStatus()
+        {
+            CurrentWeightCarried = GetCurrentWeightCarried();
+            if (CharacterStats.Strength.GetWeightAllowance() >= CurrentWeightCarried)
+            {
+                CurrentWeightStatus = WeightStatus.Unencumbered;
+            }
+            else if (CharacterStats.Strength.GetLightEncumbrance() >= CurrentWeightCarried)
+            {
+                CurrentWeightStatus = WeightStatus.Light;
+            }
+            else if (CharacterStats.Strength.GetWeightModerate() >= CurrentWeightCarried)
+            {
+                CurrentWeightStatus = WeightStatus.Moderate;
+            }
+            else if (CharacterStats.Strength.GetWeightHeavyLaden() >= CurrentWeightCarried)
+            {
+                CurrentWeightStatus = WeightStatus.HeavyLaden;
+            }
+            else if (CharacterStats.Strength.GetMaxCarryWeight() >= CurrentWeightCarried)
+            {
+                CurrentWeightStatus = WeightStatus.Severe;
+            }
+            else
+            {
+                CurrentWeightStatus = WeightStatus.Overloaded;
+            }
+
+        }
+
+        public WeightStatus GetCurrentWeightStatus() => CurrentWeightStatus;
         #endregion
+
+        #region Level Up
+        public void LevelUp()
+        {
+
+
+            UpdateWeightStatus();
+        }
+        #endregion  
     }
 }

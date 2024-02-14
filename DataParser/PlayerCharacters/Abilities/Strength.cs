@@ -57,7 +57,7 @@ namespace PlayerCharacters.Abilities
             else return 14;
         }
 
-        public int GetWeightAllowance()
+        public double GetWeightAllowance()
         {
             if (Ability <= 1 && AbilityFractional < 51) return 1;
             else if (Ability <= 1 && AbilityFractional > 50) return 2;
@@ -110,7 +110,7 @@ namespace PlayerCharacters.Abilities
             else return 1500;
         }
 
-        public int GetLightEncumbrance()
+        public double GetLightEncumbrance()
         {
             if (Ability <= 1 && AbilityFractional < 51) return 3;
             else if (Ability <= 1 && AbilityFractional > 50) return 4;
@@ -165,7 +165,7 @@ namespace PlayerCharacters.Abilities
 
         }
 
-        public int GetWeightModerate()
+        public double GetWeightModerate()
         {
             if (Ability <= 1 && AbilityFractional < 51) return 5;
             else if (Ability <= 1 && AbilityFractional > 50) return 6;
@@ -219,7 +219,7 @@ namespace PlayerCharacters.Abilities
 
         }
 
-        public int GetWeightHeavyLaden()
+        public double GetWeightHeavyLaden()
         {
             if (Ability <= 1 && AbilityFractional < 51) return 7;
             else if (Ability <= 1 && AbilityFractional > 50) return 8;
@@ -273,7 +273,7 @@ namespace PlayerCharacters.Abilities
         }
 
 
-        public int GetMaxCarryWeight()
+        public double GetMaxCarryWeight()
         {
             if (Ability <= 1 && AbilityFractional < 51) return 9;
             else if (Ability <= 1 && AbilityFractional > 50) return 10;
