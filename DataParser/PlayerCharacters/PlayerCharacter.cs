@@ -1,10 +1,11 @@
 ﻿using Armor;
 using PlayerCharacters.Abilities;
+using PlayerCharacters.PlayerCharacterRaces;
 using System.Reflection;
 using Universals;
 using Weapons;
 using static GenericEnums.GenericEnums;
-using static PlayerCharacters.PlayerCharacterEnums;
+using static PlayerCharacters.PCStatics;
 
 namespace PlayerCharacters
 {
@@ -13,6 +14,7 @@ namespace PlayerCharacters
     {
         
         public required string Name { get; set; }
+        public required IRace Race { get; set; }
         public List<IWeapon>? Weapons { get; set; }
         public int MaxHp { get; set; }
         public int CurrentHp { get; set; }

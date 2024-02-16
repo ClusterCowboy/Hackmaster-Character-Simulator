@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlayerCharacters
 {
-    public class PlayerCharacterEnums
+    public class PCStatics
     {
         public enum WeightStatus
         {
@@ -17,6 +17,7 @@ namespace PlayerCharacters
             Severe,
             Overloaded
         }
+
 
     }
 }

@@ -16,6 +16,8 @@ namespace PlayerCharacters.Abilities
             AbilityMin = RacialMin;
         }
 
+        
+
         public int GetMeleeHitProb()
         {
             if (Ability <= 3) return -3;
