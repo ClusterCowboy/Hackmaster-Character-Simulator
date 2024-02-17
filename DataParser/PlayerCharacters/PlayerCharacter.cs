@@ -1,5 +1,6 @@
 ﻿using Armor;
 using PlayerCharacters.Abilities;
+using PlayerCharacters.CharacterGeneration;
 using PlayerCharacters.PlayerCharacterRaces;
 using System.Reflection;
 using Universals;
@@ -144,6 +145,10 @@ namespace PlayerCharacters
         }
 
         public WeightStatus GetCurrentWeightStatus() => CurrentWeightStatus;
+        #endregion
+
+        #region Character Generation
+        public Family? CharactersFamily { get; private set; }
         #endregion
 
         #region Level Up

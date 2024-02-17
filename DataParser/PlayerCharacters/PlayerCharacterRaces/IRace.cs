@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static PlayerCharacters.PCStatics;
 
 namespace PlayerCharacters.PlayerCharacterRaces
 {
@@ -53,6 +55,19 @@ namespace PlayerCharacters.PlayerCharacterRaces
         int ComMax { get; }
         int ComMin { get; }
         #endregion
+        #endregion
+
+        #region Physical Characteristics
+        public int CurrentAge { get; set; }
+        public int MaxAge { get; set; }
+        public void GenerateStartingAge(int ageModifierFromClass);
+        public Handedness Handedness { get; set; }
+        public int HeightInInches { get; set; }
+        public int WeightInPounds { get; set; }
+        public void GenerateHeightAndWeight();
+        public SocialClass SocialClass { get; set; }
+        public int GetCircumstancesOfBirthRacialMod { get; }
+        public int GetIllegitimateBirthRacialMod { get; }
         #endregion
 
         int GetInfravisionDistance() { return 0; }
