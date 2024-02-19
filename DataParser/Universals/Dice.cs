@@ -61,5 +61,10 @@ namespace Universals
         {
             return (Roll(1, 100) <= target) ? true : false;
         }
+
+        public int RollPercentile(int modifier = 0)
+        {
+            return Roll(1, 100, modifier)
+        }
     }
 }
