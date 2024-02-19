@@ -1,0 +1,32 @@
+﻿First thing's first, Level 1 generator. 
+Baseline auto generation, no modifications
+
+Task Name							Priority (1-5)	Completed	
+Roll Ability Scores					1				X
+Choose Race							2				X
+Racial Abilities and Talents		4
+Priors and Particulars				5
+Choose Class						2				X
+Quirks and Flaws					5
+	Tables Based on Class			5
+Finalize Ability Scores				2				X
+Finish Background
+	Final Age, Money				5
+Starting Honor						3
+Starting Proficencies				3
+Starting Skills and Talents			5
+Cash in any remaining BPs for gold	5
+Choose Alignment					5
+Saving Throws						2
+Hit Points							2
+Base Movement (Table 16A)			2
+Encumbrance (Table 9Y)				2
+Equipment							5
+
+
+Further paths:
+
+* Classes
+* Saves
+* Attack Matrix
+* Hit Dice

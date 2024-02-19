@@ -17,6 +17,18 @@ namespace PlayerCharacters.Abilities
             AbilityMin = RacialMin;
         }
 
+        /// <summary>
+        /// First time roll, generate values
+        /// </summary>
+        /// <param name="RacialMax"></param>
+        /// <param name="RacialMin"></param>
+        public Constitution(int RacialMax, int RacialMin)
+        {
+            AbilityMax = RacialMax;
+            AbilityMin = RacialMin;
+            GenerateStartingValues();
+        }
+
         /***
          * Insert Hit point roll, get total Hit points
          * */

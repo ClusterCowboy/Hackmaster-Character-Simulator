@@ -16,6 +16,18 @@ namespace PlayerCharacters.Abilities
             AbilityMin = RacialMin;
         }
 
+        /// <summary>
+        /// First time roll, generate values
+        /// </summary>
+        /// <param name="RacialMax"></param>
+        /// <param name="RacialMin"></param>
+        public Wisdom (int RacialMax, int RacialMin)
+        {
+            AbilityMax = RacialMax;
+            AbilityMin = RacialMin;
+            GenerateStartingValues();
+        }
+
         public int GetMagicalDefenseAdjustment()
         {
             if (Ability <= 1) return -6;

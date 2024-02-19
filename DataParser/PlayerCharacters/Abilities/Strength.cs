@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Universals;
 
 namespace PlayerCharacters.Abilities
 {
@@ -16,7 +17,17 @@ namespace PlayerCharacters.Abilities
             AbilityMin = RacialMin;
         }
 
-        
+        /// <summary>
+        /// First time roll, generate values
+        /// </summary>
+        /// <param name="RacialMax"></param>
+        /// <param name="RacialMin"></param>
+        public Strength(int RacialMax, int RacialMin)
+        {
+            AbilityMax = RacialMax;
+            AbilityMin = RacialMin;
+            GenerateStartingValues();
+        }
 
         public int GetMeleeHitProb()
         {

@@ -1,4 +1,6 @@
-﻿namespace PlayerCharacters.Abilities
+﻿using Universals;
+
+namespace PlayerCharacters.Abilities
 {
     public abstract class AbilityScore
     {
@@ -6,6 +8,21 @@
         internal int AbilityFractional;
         internal int AbilityMax;
         internal int AbilityMin;
+        public void GenerateStartingValues()
+        {
+            Ability = Dice.Instance.RollInBounds(AbilityMax, AbilityMin);
+            AbilityFractional = Dice.Instance.RollPercentile();
+
+            // Bounds Checking
+            if (Ability > AbilityMax) { 
+                Ability = AbilityMax; 
+            }
+            else if (Ability < AbilityMin) {
+                Ability = AbilityMin; 
+            }
+        }
+
+
         public void AddFractional(int Fractional)
         {
             // Butting against the racial max allowed

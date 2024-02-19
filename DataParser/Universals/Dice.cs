@@ -15,6 +15,9 @@ namespace Universals
         public int Roll(int numOfDice, int sidesOfDice, int modifier = 0) =>
             RandomNumberGenerator.GetInt32(numOfDice, numOfDice * sidesOfDice) + modifier;
 
+        public int RollInBounds(int max, int min, int modifier = 0) =>
+            RandomNumberGenerator.GetInt32(min, max) + modifier;
+
         /// <summary>
         /// Roll dice that explode! Exploding is when you roll the highest value, 
         /// then roll again. Add the new value -1 to the total. If it's the highest
@@ -64,7 +67,7 @@ namespace Universals
 
         public int RollPercentile(int modifier = 0)
         {
-            return Roll(1, 100, modifier)
+            return Roll(1, 100, modifier);
         }
     }
 }

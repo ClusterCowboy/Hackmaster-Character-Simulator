@@ -53,5 +53,48 @@ namespace PlayerCharacters.PlayerCharacterRaces
         public int ComMax => 18;
 
         public int ComMin => 5;
+
+        public Dictionary<PCStatics.ClassList, int> ClassList => new Dictionary<PCStatics.ClassList, int>
+        {
+            {PCStatics.ClassList.Cleric, 13},
+            {PCStatics.ClassList.Druid, 13},
+            {PCStatics.ClassList.Fighter, 12},
+            {PCStatics.ClassList.Barbarian, -1},
+            {PCStatics.ClassList.Berserker, 13},
+            {PCStatics.ClassList.Cavalier, 13},
+            {PCStatics.ClassList.DarkKnight, -1},
+            {PCStatics.ClassList.KnightErrant, 12},
+            {PCStatics.ClassList.Paladin, -1},
+            {PCStatics.ClassList.Ranger, 15},
+            {PCStatics.ClassList.MagicUser, 15},
+            {PCStatics.ClassList.BattleMage, 15},
+            {PCStatics.ClassList.Illusionist, -1},
+            {PCStatics.ClassList.Thief, 12},
+            {PCStatics.ClassList.Assassin, 10},
+            {PCStatics.ClassList.Bard, -1}
+        };
+
+        #region Physical Characteristics
+        public int CurrentAge { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int MaxAge { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public PCStatics.Handedness Handedness { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int HeightInInches { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int WeightInPounds { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public PCStatics.SocialClass SocialClass { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public int GetCircumstancesOfBirthRacialMod => throw new NotImplementedException();
+
+        public int GetIllegitimateBirthRacialMod => throw new NotImplementedException();
+
+        public void GenerateHeightAndWeight()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GenerateStartingAge(int ageModifierFromClass)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

@@ -149,7 +149,52 @@ namespace PlayerCharacters
 
         #region Character Generation
         public Family? CharactersFamily { get; private set; }
+
+
+
         #endregion
+
+        #region First Level
+        /// <summary>
+        /// TODO: Ensure character can only be generated once
+        /// </summary>
+        public void InitialGeneration_AutoGenerate()
+        {
+            // First, choose Race because the Min/Max number matter
+            // TODO: Number of races updated as we go up
+            switch (Random.Shared.Next(0, 3))
+            {
+                case 0:
+                    Race = new Elf(); break;
+                case 1:
+                    Race = new HalfElf(); break;
+                case 2:
+                    Race = new Dwarf(); break;
+                default:
+                    Race = new Human(); break;
+            }
+
+            // Now, generate the stats based on the race
+            CharacterStats = new CharacterStatBlock()
+            {
+                Strength = new Strength(Race.StrMax, Race.StrMin),
+                Dexterity = new Dexterity(Race.DexMax, Race.DexMin),
+                Constitution = new Constitution(Race.ConMax, Race.ConMin),
+                Intelligence = new Intelligence(Race.IntMax, Race.IntMin),
+                Wisdom = new Wisdom(Race.WisMax, Race.WisMin),
+                Charisma = new Charisma(Race.ChaMax, Race.ChaMin),
+                Comeliness = new Comeliness(Race.ComMax, Race.ComMin),
+                // Honor defaults to zero
+                Honor = 0,
+                TempHonor = 0
+            };
+
+            // Generate the Class, one for now but options for more as time goes on
+            Class = CharacterClasses.Fighter;
+
+        }
+        #endregion
+
 
         #region Level Up
         public void LevelUp()

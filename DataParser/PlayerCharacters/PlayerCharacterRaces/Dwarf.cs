@@ -73,5 +73,29 @@ namespace PlayerCharacters.PlayerCharacterRaces
             {PCStatics.ClassList.Assassin, 12},
             {PCStatics.ClassList.Bard, -1}
         };
+
+
+        #region Physical Characteristics
+        public int CurrentAge { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int MaxAge { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public PCStatics.Handedness Handedness { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int HeightInInches { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int WeightInPounds { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public PCStatics.SocialClass SocialClass { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public int GetCircumstancesOfBirthRacialMod => throw new NotImplementedException();
+
+        public int GetIllegitimateBirthRacialMod => throw new NotImplementedException();
+
+        public void GenerateHeightAndWeight()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GenerateStartingAge(int ageModifierFromClass)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

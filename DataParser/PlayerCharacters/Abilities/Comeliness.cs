@@ -18,5 +18,17 @@ namespace PlayerCharacters.Abilities
             AbilityMax = RacialMax;
             AbilityMin = RacialMin;
         }
+
+        /// <summary>
+        /// First time roll, generate values
+        /// </summary>
+        /// <param name="RacialMax"></param>
+        /// <param name="RacialMin"></param>
+        public Comeliness(int RacialMax, int RacialMin)
+        {
+            AbilityMax = RacialMax;
+            AbilityMin = RacialMin;
+            GenerateStartingValues();
+        }
     }
 }
