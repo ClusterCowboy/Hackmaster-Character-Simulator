@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static PlayerCharacters.PCStatics;
 
 namespace PlayerCharacters.PlayerCharacterRaces
 {
@@ -58,5 +59,7 @@ namespace PlayerCharacters.PlayerCharacterRaces
         int GetInfravisionDistance() { return 0; }
 
         int GetBuildingPointBonus() { return 0; }
+
+        public Dictionary<ClassList, int> ClassList { get; }
     }
 }

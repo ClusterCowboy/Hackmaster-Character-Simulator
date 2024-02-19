@@ -53,5 +53,25 @@ namespace PlayerCharacters.PlayerCharacterRaces
         public int ComMax => 17;
 
         public int ComMin => 5;
+
+        public Dictionary<PCStatics.ClassList, int> ClassList => new Dictionary<PCStatics.ClassList, int>
+        {
+            {PCStatics.ClassList.Cleric, 14},
+            {PCStatics.ClassList.Druid, 14},
+            {PCStatics.ClassList.Fighter, 14},
+            {PCStatics.ClassList.Barbarian, -1},
+            {PCStatics.ClassList.Berserker, 14},
+            {PCStatics.ClassList.Cavalier, -1},
+            {PCStatics.ClassList.DarkKnight, -1},
+            {PCStatics.ClassList.KnightErrant, 14},
+            {PCStatics.ClassList.Paladin, -1},
+            {PCStatics.ClassList.Ranger, 16},
+            {PCStatics.ClassList.MagicUser, 12},
+            {PCStatics.ClassList.BattleMage, 10},
+            {PCStatics.ClassList.Illusionist, -1},
+            {PCStatics.ClassList.Thief, 99},
+            {PCStatics.ClassList.Assassin, 11},
+            {PCStatics.ClassList.Bard, 99}
+        };
     }
 }

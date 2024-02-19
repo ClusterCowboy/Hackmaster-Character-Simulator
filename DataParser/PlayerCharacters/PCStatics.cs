@@ -18,6 +18,24 @@ namespace PlayerCharacters
             Overloaded
         }
 
-
+        public enum ClassList
+        {
+            Cleric,
+            Druid,
+            Fighter,
+            Barbarian,
+            Berserker,
+            Cavalier,
+            DarkKnight,
+            KnightErrant,
+            Paladin,
+            Ranger,
+            MagicUser,
+            BattleMage,
+            Illusionist,
+            Thief,
+            Assassin,
+            Bard
+        }
     }
 }
