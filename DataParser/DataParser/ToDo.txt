@@ -30,3 +30,5 @@ Further paths:
 * Saves
 * Attack Matrix
 * Hit Dice
+* Critical Hits
+* Critical Fumbles
