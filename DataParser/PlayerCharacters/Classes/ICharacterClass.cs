@@ -10,6 +10,7 @@ namespace PlayerCharacters.Classes
     {
         string Name { get; }
         int HitDie { get; }
+        public int RollToHitAC(int toHitModifier);
 
     }
 }
