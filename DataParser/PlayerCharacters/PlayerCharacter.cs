@@ -25,17 +25,29 @@ namespace PlayerCharacters
         {
             get => ((CurrentlyWornArmor == null) ? 10 : CurrentlyWornArmor.CurrentAC)
                 + ((CurrentlyWornShield == null) ? 0 : CurrentlyWornShield.CurrentAC)
-                + CharacterStats.Dexterity.GetDefenseAdjustment();
+                + CharacterStats.Dexterity.GetDefenseAdjustment()
+                + GetACPenaltyDueToEncumbrance;
         }
         public Armor.Armor? CurrentlyWornArmor { get; set; }
         public Shield? CurrentlyWornShield { get; set; }
         public Helmet? CurrentlyWornHelmet { get; set; }
+
+
         public required CharacterStatBlock CharacterStats {  get; set; }
+
+        #region Weight
         private WeightStatus CurrentWeightStatus { get; set; } = WeightStatus.Unencumbered;
         private double CurrentWeightCarried { get; set; } = 0;
+        private int ACPenaltyDueToEncumbrance { get; set; } = 0;
+        public int GetACPenaltyDueToEncumbrance => ACPenaltyDueToEncumbrance;
+        private int AttackPenaltyDueToEncumbrance { get; set; } = 0;
+        public int GetAttackPenaltyDueToEncumbrance => AttackPenaltyDueToEncumbrance;
+        #endregion
 
         public int BaseSpeed => Race.SpeedRating;
-        public int CurrentSpeed { get; private set; }            
+        public int CurrentSpeed { get; private set; }
+
+
 
         #region Gear
         public void EquipArmor(Armor.Armor armor)
@@ -61,9 +73,14 @@ namespace PlayerCharacters
         #endregion
 
         #region Combat
-        public int GetMeleeAttackBonus() { return CharacterStats.Strength.GetMeleeHitProb(); }
-        public int GetMeleeDamageBonus() { return CharacterStats.Strength.GetMeleeDamageAdj(); }
-        public int GetRangedAttackBonus() { return CharacterStats.Dexterity.GetMissileAdjustment(); }
+        public int GetMeleeAttackBonus() => 
+            CharacterStats.Strength.GetMeleeHitProb() 
+            + AttackPenaltyDueToEncumbrance;
+        public int GetMeleeDamageBonus() =>
+            CharacterStats.Strength.GetMeleeDamageAdj();
+        public int GetRangedAttackBonus() =>
+            CharacterStats.Dexterity.GetMissileAdjustment() 
+            + AttackPenaltyDueToEncumbrance;
         #endregion
 
         #region Feats Of Strength
@@ -125,30 +142,49 @@ namespace PlayerCharacters
             {
                 CurrentWeightStatus = WeightStatus.Unencumbered;
                 CurrentSpeed = BaseSpeed;
+
+                ACPenaltyDueToEncumbrance = 0;
+                AttackPenaltyDueToEncumbrance = 0;
             }
             else if (CharacterStats.Strength.GetLightEncumbrance() >= CurrentWeightCarried)
             {
                 CurrentWeightStatus = WeightStatus.Light;
                 CurrentSpeed = (int)((double)BaseSpeed * .66);
+
+                ACPenaltyDueToEncumbrance = 0;
+                AttackPenaltyDueToEncumbrance = 0;
             }
             else if (CharacterStats.Strength.GetWeightModerate() >= CurrentWeightCarried)
             {
                 CurrentWeightStatus = WeightStatus.Moderate;
                 CurrentSpeed = (int)((double)BaseSpeed * .5);
+
+                ACPenaltyDueToEncumbrance = 0;
+                AttackPenaltyDueToEncumbrance = -1;
             }
             else if (CharacterStats.Strength.GetWeightHeavyLaden() >= CurrentWeightCarried)
             {
                 CurrentWeightStatus = WeightStatus.HeavyLaden;
                 CurrentSpeed = (int)((double)BaseSpeed * .33);
+
+                ACPenaltyDueToEncumbrance = 1;
+                AttackPenaltyDueToEncumbrance = -2;
             }
             else if (CharacterStats.Strength.GetMaxCarryWeight() >= CurrentWeightCarried)
             {
                 CurrentWeightStatus = WeightStatus.Severe;
                 CurrentSpeed = 1;
+
+                ACPenaltyDueToEncumbrance = 3;
+                AttackPenaltyDueToEncumbrance = -4;
             }
             else
             {
                 CurrentWeightStatus = WeightStatus.Overloaded;
+                CurrentSpeed = 0;
+
+                ACPenaltyDueToEncumbrance = 3;
+                AttackPenaltyDueToEncumbrance = -4;
             }
 
         }
