@@ -4,16 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Universals;
+using Weapons;
+using static GenericEnums.GenericEnums;
 
 namespace PlayerCharacters.Classes
 {
     public class Fighter : ICharacterClass
     {
-        public string Name => "Fighter";
+        public string ClassName => "Fighter";
 
         public int HitDie => 10;
 
-        public int Level { get; set; } = 1;
+        public int NonProficentWeaponPenalty => -2;
+
+        public int InitialWeaponProficiencySlots => 4;
+
+        public int NumberOfLevelsBetweenProficiencySlots => 2;
 
         public Dictionary<int, int> AC20Range
         {
@@ -42,31 +48,11 @@ namespace PlayerCharacters.Classes
                 { 21  , -22 }
             };
         }
+        public int Level { get; set; } = 1;
+        public List<IWeapon>? WeaponProficiencies { get; set; }
 
-        public int RollToHitAC(int toHitModifier)
-        {
-            int dieRoll = Dice.Instance.Roll(1, 20, toHitModifier);
+        public bool SaveVs(SavingThrowCategories type, int modifier) =>
+            Di.ce.D20CheckUnderPass(CharacterClassDBInterface.Instance.fighterSavingThrows[Level][type], modifier);
 
-            if (dieRoll == 20)
-            {
-                return AC20Range[Level];
-            }
-            else if (dieRoll > 20)
-            {
-                return (AC20Range[Level] - 5) - (dieRoll - 20);
-            }
-            else
-            {
-                return AC20Range[Level] + (20 - dieRoll);
-            }
-        }
-
-        public int GetBaseSeverityLevel(int enemyAC, int toHitModifier)
-        {
-            return enemyAC 
-                - (AC20Range[Level] + 15) // Chance to hit AC 15 
-                + toHitModifier 
-                + Dice.Instance.RollExplodingDice(1,8);
-        }
     }
 }

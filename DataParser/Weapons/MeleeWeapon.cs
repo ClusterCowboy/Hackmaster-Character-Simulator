@@ -73,17 +73,17 @@ namespace Weapons
             switch (size)
             {
                 case Size.T:
-                    return Dice.Instance.RollExplodingDice(tinyDiceNum, tinyDiceSides, tinyDiceMod + modifier);
+                    return Di.ce.RollExplodingDice(tinyDiceNum, tinyDiceSides, tinyDiceMod + modifier);
                 case Size.S:
-                    return Dice.Instance.RollExplodingDice(smallDiceNum, smallDiceSides, smallDiceMod + modifier);
+                    return Di.ce.RollExplodingDice(smallDiceNum, smallDiceSides, smallDiceMod + modifier);
                 case Size.M:
-                    return Dice.Instance.RollExplodingDice(mediumDiceNum, mediumDiceSides, mediumDiceMod + modifier);
+                    return Di.ce.RollExplodingDice(mediumDiceNum, mediumDiceSides, mediumDiceMod + modifier);
                 case Size.L:
-                    return Dice.Instance.RollExplodingDice(largeDiceNum, largeDiceSides, largeDiceMod + modifier);
+                    return Di.ce.RollExplodingDice(largeDiceNum, largeDiceSides, largeDiceMod + modifier);
                 case Size.H:
-                    return Dice.Instance.RollExplodingDice(hugeDiceNum, hugeDiceSides, hugeDiceMod + modifier);
+                    return Di.ce.RollExplodingDice(hugeDiceNum, hugeDiceSides, hugeDiceMod + modifier);
                 case Size.G:
-                    return Dice.Instance.RollExplodingDice(gargantuanDiceNum, gargantuanDiceSides, gargantuanDiceMod + modifier);
+                    return Di.ce.RollExplodingDice(gargantuanDiceNum, gargantuanDiceSides, gargantuanDiceMod + modifier);
                 default:
                     return 0;
             }

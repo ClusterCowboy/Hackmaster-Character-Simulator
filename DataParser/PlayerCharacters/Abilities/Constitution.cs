@@ -67,6 +67,8 @@ namespace PlayerCharacters.Abilities
             else if (Ability <= 24) hpRoll += 7;
             else hpRoll += 7;
 
+            if (hpRoll < 1) { return 1; }
+
             return hpRoll;
         }
 

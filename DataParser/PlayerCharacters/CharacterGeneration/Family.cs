@@ -43,7 +43,7 @@ namespace PlayerCharacters.CharacterGeneration
             }
 
             // Parent Status
-            int MotherAlive = Dice.Instance.RollPercentile();
+            int MotherAlive = Di.ce.RollPercentile();
             if (MotherAlive == 1)
             {
                 MotherIsAlive = true;
@@ -61,7 +61,7 @@ namespace PlayerCharacters.CharacterGeneration
 
             if (!IsOrphan)
             {
-                int FatherAlive = Dice.Instance.RollPercentile();
+                int FatherAlive = Di.ce.RollPercentile();
                 if (FatherAlive == 1)
                 {
                     FatherIsAlive = true;
@@ -82,12 +82,12 @@ namespace PlayerCharacters.CharacterGeneration
 
         private void DetermineIfCircumstancesOfBirthWereLegit(int RacialModifierLegit)
         {
-            BirthWasLegitimate = Dice.Instance.PercentileCheckUnderPass(90 - RacialModifierLegit);
+            BirthWasLegitimate = Di.ce.PercentileCheckUnderPass(90 - RacialModifierLegit);
         }
 
         public void DetermineCircumstancesOfIllegitimateBirth(int RacialModifierIllegit)
         {
-            int number = Dice.Instance.Roll(1, 100, RacialModifierIllegit);
+            int number = Di.ce.Roll(1, 100, RacialModifierIllegit);
 
             if (number <= 5) 
             { 
@@ -107,12 +107,12 @@ namespace PlayerCharacters.CharacterGeneration
             {
                 ResultOfAdulterousAffair = true;
                 MotherIsKnown = true;
-                FatherIsKnown = Dice.Instance.PercentileCheckUnderPass(75);
+                FatherIsKnown = Di.ce.PercentileCheckUnderPass(75);
             }
             else
             {
                 ArrangedThroughSurrogateMother = true;
-                MotherIsKnown = Dice.Instance.PercentileCheckUnderPass(25);
+                MotherIsKnown = Di.ce.PercentileCheckUnderPass(25);
                 FatherIsKnown = true;
             }
         }

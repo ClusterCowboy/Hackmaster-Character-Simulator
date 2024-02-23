@@ -10,7 +10,7 @@ namespace PlayerCharacters.PlayerCharacterRaces
     {
         public string Name => "Dwarf";
 
-        public int SpeedRating => 12;
+        public int SpeedRating => 6;
 
         public int StrRacialModifier => 0;
 

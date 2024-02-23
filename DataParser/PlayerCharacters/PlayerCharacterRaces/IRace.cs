@@ -11,6 +11,8 @@ namespace PlayerCharacters.PlayerCharacterRaces
     public interface IRace
     {
         string Name { get; }
+
+        // This is table 16A in the PHB
         int SpeedRating { get; }
 
         #region Stats

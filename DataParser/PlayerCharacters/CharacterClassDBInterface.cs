@@ -1,12 +1,19 @@
 ﻿using System.Data.SQLite;
+using Universals;
 using Weapons;
 using static GenericEnums.GenericEnums;
 
 namespace PlayerCharacters
 {
 
-    public class CharacterClassDBInterface
+    public sealed class CharacterClassDBInterface
     {
+        private static readonly Lazy<CharacterClassDBInterface> lazy =
+            new Lazy<CharacterClassDBInterface>(() => new CharacterClassDBInterface());
+
+        public static CharacterClassDBInterface Instance { get { return lazy.Value; } }
+
+
         public string CharacterClassConnectionString = "Data Source=characterclass.db;Version=3";
         // Cleric Stuff
         public Dictionary<int, Dictionary<SavingThrowCategories, int>> clericSavingThrows { get; set; }

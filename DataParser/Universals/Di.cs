@@ -3,14 +3,14 @@ using System.Security.Cryptography;
 
 namespace Universals
 {
-    public sealed class Dice
+    public sealed class Di
     {
-        private static readonly Lazy<Dice> lazy =
-            new Lazy<Dice>(() => new Dice());
+        private static readonly Lazy<Di> lazy =
+            new Lazy<Di>(() => new Di());
 
-        public static Dice Instance { get { return lazy.Value; } }
+        public static Di ce { get { return lazy.Value; } }
 
-        private Dice() { }
+        private Di() { }
 
         public int Roll(int numOfDice, int sidesOfDice, int modifier = 0) =>
             RandomNumberGenerator.GetInt32(numOfDice, numOfDice * sidesOfDice) + modifier;
@@ -55,9 +55,9 @@ namespace Universals
             return (Roll(1, 20) >= target) ? true : false;
         }
 
-        public bool D20CheckUnderPass(int target)
+        public bool D20CheckUnderPass(int target, int modifier = 0)
         {
-            return (Roll(1, 20) <= target) ? true : false;
+            return ((Roll(1, 20) + modifier) <= target) ? true : false;
         }
 
         public bool PercentileCheckUnderPass(int target)

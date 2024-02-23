@@ -13,10 +13,11 @@ namespace PlayerCharacters
     [Serializable]
     public class PlayerCharacter
     {
-        
+
         public required string Name { get; set; }
         public required IRace Race { get; set; }
         public List<IWeapon>? Weapons { get; set; }
+        public int HitDie { get; }
         public int MaxHp { get; set; }
         public int CurrentHp { get; set; }
         public CharacterClasses Class { get; set; }
@@ -32,6 +33,9 @@ namespace PlayerCharacters
         public required CharacterStatBlock CharacterStats {  get; set; }
         private WeightStatus CurrentWeightStatus { get; set; } = WeightStatus.Unencumbered;
         private double CurrentWeightCarried { get; set; } = 0;
+
+        public int BaseSpeed => Race.SpeedRating;
+        public int CurrentSpeed { get; private set; }            
 
         #region Gear
         public void EquipArmor(Armor.Armor armor)
@@ -64,11 +68,11 @@ namespace PlayerCharacters
 
         #region Feats Of Strength
         public bool AttemptOpenDoor() =>
-            Dice.Instance.D20CheckUnderPass(CharacterStats.Strength.GetOpenDoor());
+            Di.ce.D20CheckUnderPass(CharacterStats.Strength.GetOpenDoor());
         public bool AttemptOpenLockedBarredMagicalDoor() =>
-            Dice.Instance.D20CheckUnderPass(CharacterStats.Strength.GetOpenLockedBarredMagicallyHeldDoor());
+            Di.ce.D20CheckUnderPass(CharacterStats.Strength.GetOpenLockedBarredMagicallyHeldDoor());
         public bool AttemptBendBarsLiftGates() =>
-            Dice.Instance.D20CheckUnderPass(CharacterStats.Strength.GetBendBarsLiftGates());
+            Di.ce.D20CheckUnderPass(CharacterStats.Strength.GetBendBarsLiftGates());
         #endregion
 
         #region Weight Amounts
@@ -120,22 +124,27 @@ namespace PlayerCharacters
             if (CharacterStats.Strength.GetWeightAllowance() >= CurrentWeightCarried)
             {
                 CurrentWeightStatus = WeightStatus.Unencumbered;
+                CurrentSpeed = BaseSpeed;
             }
             else if (CharacterStats.Strength.GetLightEncumbrance() >= CurrentWeightCarried)
             {
                 CurrentWeightStatus = WeightStatus.Light;
+                CurrentSpeed = (int)((double)BaseSpeed * .66);
             }
             else if (CharacterStats.Strength.GetWeightModerate() >= CurrentWeightCarried)
             {
                 CurrentWeightStatus = WeightStatus.Moderate;
+                CurrentSpeed = (int)((double)BaseSpeed * .5);
             }
             else if (CharacterStats.Strength.GetWeightHeavyLaden() >= CurrentWeightCarried)
             {
                 CurrentWeightStatus = WeightStatus.HeavyLaden;
+                CurrentSpeed = (int)((double)BaseSpeed * .33);
             }
             else if (CharacterStats.Strength.GetMaxCarryWeight() >= CurrentWeightCarried)
             {
                 CurrentWeightStatus = WeightStatus.Severe;
+                CurrentSpeed = 1;
             }
             else
             {
@@ -192,11 +201,13 @@ namespace PlayerCharacters
             // Generate the Class, one for now but options for more as time goes on
             Class = CharacterClasses.Fighter;
 
+            // Always get a 20hp kicker
+            MaxHp = 20 + CharacterStats.Constitution.AddHitPointAdjustment(Di.ce.Roll(1, HitDie)); 
         }
         #endregion
 
 
-        #region Level Up
+        #region Levels
         public void LevelUp()
         {
 

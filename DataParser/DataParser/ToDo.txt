@@ -16,9 +16,9 @@ Starting Honor						3
 Starting Proficencies				3
 Starting Skills and Talents			5
 Cash in any remaining BPs for gold	5
-Choose Alignment					5
-Saving Throws						2
-Hit Points							2
+Choose Alignment					5				X
+Saving Throws						2				X
+Hit Points							2				X
 Base Movement (Table 16A)			2
 Encumbrance (Table 9Y)				2
 Equipment							5

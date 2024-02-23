@@ -10,8 +10,8 @@ namespace PlayerCharacters.Abilities
         internal int AbilityMin;
         public void GenerateStartingValues()
         {
-            Ability = Dice.Instance.RollInBounds(AbilityMax, AbilityMin);
-            AbilityFractional = Dice.Instance.RollPercentile();
+            Ability = Di.ce.RollInBounds(AbilityMax, AbilityMin);
+            AbilityFractional = Di.ce.RollPercentile();
 
             // Bounds Checking
             if (Ability > AbilityMax) { 
